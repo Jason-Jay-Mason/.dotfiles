@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <value type="int" value="2"/>
+    <property name="dark-mode" type="bool" value="true"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=6;x=720;y=18"/>
+      <property name="length" type="double" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="icon-size" type="uint" value="0"/>
+      <property name="size" type="uint" value="34"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="13"/>
+        <value type="int" value="16"/>
+        <value type="int" value="26"/>
+        <value type="int" value="1"/>
+        <value type="int" value="14"/>
+        <value type="int" value="3"/>
+        <value type="int" value="2"/>
+        <value type="int" value="5"/>
+        <value type="int" value="8"/>
+        <value type="int" value="6"/>
+        <value type="int" value="11"/>
+        <value type="int" value="12"/>
+        <value type="int" value="17"/>
+        <value type="int" value="18"/>
+        <value type="int" value="15"/>
+        <value type="int" value="9"/>
+        <value type="int" value="19"/>
+        <value type="int" value="4"/>
+      </property>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.098039215686274564"/>
+        <value type="double" value="0.090196078431372534"/>
+        <value type="double" value="0.14117647058823529"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="autohide-behavior" type="uint" value="1"/>
+      <property name="span-monitors" type="bool" value="false"/>
+      <property name="output-name" type="string" value="Automatic"/>
+    </property>
+    <property name="panel-2" type="empty">
+      <property name="position" type="string" value="p=4;x=1368;y=875"/>
+      <property name="size" type="uint" value="120"/>
+      <property name="mode" type="uint" value="1"/>
+      <property name="length" type="double" value="1"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="autohide-behavior" type="uint" value="1"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="20"/>
+      </property>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-2" type="string" value="tasklist">
+      <property name="grouping" type="uint" value="1"/>
+      <property name="show-labels" type="bool" value="false"/>
+      <property name="flat-buttons" type="bool" value="true"/>
+      <property name="show-handle" type="bool" value="false"/>
+      <property name="include-all-workspaces" type="bool" value="true"/>
+    </property>
+    <property name="plugin-3" type="string" value="separator">
+      <property name="expand" type="bool" value="false"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-5" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
+    </property>
+    <property name="plugin-6" type="string" value="systray">
+      <property name="square-icons" type="bool" value="true"/>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (75%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (80%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (87%)"/>
+        <value type="string" value="wi-fi network connection “ma-guest” active: ma-guest (74%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (77%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (79%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (85%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (70%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (99%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (100%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (84%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (59%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (77%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (52%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (67%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (49%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (57%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (94%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (97%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (82%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (45%)"/>
+        <value type="string" value="wi-fi network connection “highplains” active: highplains (77%)"/>
+        <value type="string" value="configuring wi-fi network connection “keep it on the download-5g”…"/>
+        <value type="string" value="wi-fi network connection “centurylink0552” active: centurylink0552 (77%)"/>
+        <value type="string" value="wi-fi network connection “centurylink0552” active: centurylink0552 (57%)"/>
+        <value type="string" value="wi-fi network connection “centurylink0552” active: centurylink0552 (79%)"/>
+        <value type="string" value="wi-fi network connection “centurylink0552” active: centurylink0552 (70%)"/>
+        <value type="string" value="wi-fi network connection “centurylink0552” active: centurylink0552 (75%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (69%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (50%)"/>
+        <value type="string" value="wi-fi network connection “highplains” active: highplains (87%)"/>
+        <value type="string" value="wi-fi network connection “highplains” active: highplains (85%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (60%)"/>
+        <value type="string" value="wi-fi network connection “whyphy” active: whyphy (100%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (85%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (90%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (80%)"/>
+        <value type="string" value="wi-fi network connection “highplains” active: highplains (80%)"/>
+        <value type="string" value="wi-fi network connection “highplains” active: highplains (82%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (87%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (92%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (89%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (54%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (62%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (64%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (65%)"/>
+        <value type="string" value="wi-fi network connection “whyphy” active: whyphy (97%)"/>
+        <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (72%)"/>
+        <value type="string" value="wi-fi network connection “highplains” active: highplains (79%)"/>
+        <value type="string" value="wi-fi network connection “citybrew” active: citybrew (74%)"/>
+        <value type="string" value="redshift-gtk"/>
+        <value type="string" value="no network connection"/>
+        <value type="string" value="wi-fi network connection “shieldyourbody.com/turn-off-wifi” active: shieldyourbody.com/turn-off-wifi (100%)"/>
+        <value type="string" value="gpick"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="firewall-applet"/>
+        <value type="string" value="ethernet network connection “wired connection 1” active"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="zoom"/>
+        <value type="string" value="discord1"/>
+        <value type="string" value="redshift"/>
+        <value type="string" value="firewall-applet"/>
+      </property>
+      <property name="icon-size" type="int" value="22"/>
+    </property>
+    <property name="plugin-8" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="show-notifications" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="firefox.instance123878;firefox.instance1296;firefox.instance13247;firefox.instance13313;firefox.instance1347;firefox.instance1359;firefox.instance1368;firefox.instance1370;firefox.instance1375;firefox.instance1379;firefox.instance1383;firefox.instance1388;firefox.instance1389;firefox.instance1392;firefox.instance1393;firefox.instance1395;firefox.instance1396;firefox.instance1400;firefox.instance1401;firefox.instance1402;firefox.instance1405;firefox.instance1416;firefox.instance1420;firefox.instance1428;firefox.instance1437;firefox.instance1440;firefox.instance1443;firefox.instance1444;firefox.instance1446;firefox.instance1448;firefox.instance1449;firefox.instance1454;firefox.instance1460;firefox.instance1466;firefox.instance1469;firefox.instance1521;firefox.instance15336;firefox.instance1543;firefox.instance1600;firefox.instance1609;firefox.instance1653;firefox.instance16783;firefox.instance1691;firefox.instance1698;firefox.instance1701;firefox.instance1757;firefox.instance1766;firefox.instance1811;firefox.instance1828;firefox.instance1836;firefox.instance1845;firefox.instance1862;firefox.instance1897;firefox.instance1898;firefox.instance1904;firefox.instance1954;firefox.instance1968;firefox.instance2024;firefox.instance2041;firefox.instance2089;firefox.instance2132;firefox.instance2154;firefox.instance2157;firefox.instance2168;firefox.instance2185;firefox.instance2205;firefox.instance2216;firefox.instance2235;firefox.instance2240;firefox.instance22904;firefox.instance2341;firefox.instance2387;firefox.instance2499;firefox.instance2760;firefox.instance28114;firefox.instance29250;firefox.instance3014;firefox.instance3101;firefox.instance3244;firefox.instance3351;firefox.instance34138;firefox.instance3580;firefox.instance3653;firefox.instance3726;firefox.instance3842;firefox.instance4312;firefox.instance4761;firefox.instance5012;firefox.instance5053;firefox.instance5682;firefox.instance5687;firefox.instance6006;firefox.instance63489;firefox.instance7706;firefox.instance79768;firefox.instance84553;firefox.instance9501;firefox.instance95114;firefox.instance9580"/>
+    </property>
+    <property name="plugin-9" type="string" value="power-manager-plugin"/>
+    <property name="plugin-11" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-13" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-1" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-26" type="string" value="whiskermenu"/>
+    <property name="plugin-16" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-12" type="string" value="datetime"/>
+    <property name="plugin-14" type="string" value="separator">
+      <property name="style" type="uint" value="2"/>
+    </property>
+    <property name="plugin-15" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-17" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-18" type="string" value="separator">
+      <property name="style" type="uint" value="2"/>
+    </property>
+    <property name="plugin-19" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-20" type="string" value="pager">
+      <property name="rows" type="uint" value="2"/>
+      <property name="wrap-workspaces" type="bool" value="false"/>
+    </property>
+    <property name="plugin-4" type="string" value="notification-plugin"/>
+  </property>
+</channel>
