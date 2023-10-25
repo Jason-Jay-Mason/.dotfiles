@@ -1,0 +1,126 @@
+local ok, dracula = pcall(require, 'dracula')
+
+if not ok then
+  return
+end
+
+dracula.setup({
+  italic_comment = true,
+  transparent_bg = true
+})
+
+local palette = {
+  bg_darker = '#16141f',
+  bg = '#282A36',
+  bg_light = '#44475A',
+  fg_med = '#6272A4',
+  fg = '#F8F8F2',
+  red = '#FF5555',
+  yellow = '#F1FA8C',
+  cyan = '#8BE9FD',
+  green = '#50fa7b',
+  blue = '#FF79C6',
+  magenta = '#BD93F9',
+  none = 'NONE',
+}
+
+local highlight_groups = {
+  -- Telescope
+  TelescopeNormal = { bg = palette.none },
+  TelescopeBorder = { bg = palette.none },
+  TelescopePreviewBorder = { fg = 'none', bg = palette.none },
+  TelescopePreviewTitle = { fg = palette.none },
+  TelescopePromptBorder = { fg = palette.bg_darker, bg = palette.bg_darker },
+  TelescopePromptNormal = { bg = palette.bg_darker },
+  TelescopePromptTitle = { fg = palette.bg_darker },
+  TelescopeResultsBorder = { fg = palette.bg, bg = palette.bg },
+  TelescopeResultsNormal = { bg = palette.bg },
+  TelescopeResultsTitle = { fg = palette.bg },
+  -- This one is for lsp suggestion menue
+  Pmenu = { fg = palette.fg_med, bg = palette.none },
+  -- Bufferline
+  BufferLineBufferSelected = { bg = palette.none },
+  BufferLineFill = { bg = palette.none },
+  -- Lualine
+  lualine_c_mode_normal = { fg = palette.fg, bold = true },
+  lualine_c_mode_insert = { fg = palette.yellow, bold = true },
+  lualine_c_mode_visual = { fg = palette.green, bold = true },
+  lualine_c_mode_replace = { fg = palette.magenta, bold = true },
+  lualine_c_mode_command = { fg = palette.red, bold = true },
+  lualine_c_mode_terminal = { fg = palette.blue, bold = true },
+  lualine_c_mode_inactive = { fg = palette.subtle, bold = true },
+  lualine_c_progress_normal = { fg = palette.fg },
+  lualine_c_progress_insert = { fg = palette.fg },
+  lualine_c_progress_visual = { fg = palette.fg },
+  lualine_c_progress_replace = { fg = palette.fg },
+  lualine_c_progress_command = { fg = palette.fg },
+  lualine_c_progress_terminal = { fg = palette.fg },
+  lualine_c_progress_inactive = { fg = palette.fg },
+  lualine_c_filename_normal = { fg = palette.magenta },
+  lualine_c_filename_insert = { fg = palette.magenta },
+  lualine_c_filename_visual = { fg = palette.magenta },
+  lualine_c_filename_replace = { fg = palette.magenta },
+  lualine_c_filename_command = { fg = palette.magenta },
+  lualine_c_filename_terminal = { fg = palette.magenta },
+  lualine_c_filename_inactive = { fg = palette.magenta },
+  lualine_c_diagnostics_error_normal = { fg = palette.red },
+  lualine_c_diagnostics_error_insert = { fg = palette.red },
+  lualine_c_diagnostics_error_visual = { fg = palette.red },
+  lualine_c_diagnostics_error_replace = { fg = palette.red },
+  lualine_c_diagnostics_error_command = { fg = palette.red },
+  lualine_c_diagnostics_error_terminal = { fg = palette.red },
+  lualine_c_diagnostics_error_inactive = { fg = palette.red },
+  lualine_c_diagnostics_warn_normal = { fg = palette.yellow },
+  lualine_c_diagnostics_warn_insert = { fg = palette.yellow },
+  lualine_c_diagnostics_warn_visual = { fg = palette.yellow },
+  lualine_c_diagnostics_warn_replace = { fg = palette.yellow },
+  lualine_c_diagnostics_warn_command = { fg = palette.yellow },
+  lualine_c_diagnostics_warn_terminal = { fg = palette.yellow },
+  lualine_c_diagnostics_warn_inactive = { fg = palette.yellow },
+  lualine_c_diagnostics_info_normal = { fg = palette.blue },
+  lualine_c_diagnostics_info_insert = { fg = palette.blue },
+  lualine_c_diagnostics_info_visual = { fg = palette.blue },
+  lualine_c_diagnostics_info_replace = { fg = palette.blue },
+  lualine_c_diagnostics_info_command = { fg = palette.blue },
+  lualine_c_diagnostics_info_terminal = { fg = palette.blue },
+  lualine_c_diagnostics_info_inactive = { fg = palette.blue },
+  lualine_c_diagnostics_hint_normal = { fg = palette.green },
+  lualine_c_diagnostics_hint_insert = { fg = palette.green },
+  lualine_c_diagnostics_hint_visual = { fg = palette.green },
+  lualine_c_diagnostics_hint_replace = { fg = palette.green },
+  lualine_c_diagnostics_hint_command = { fg = palette.green },
+  lualine_c_diagnostics_hint_terminal = { fg = palette.green },
+  lualine_c_diagnostics_hint_inactive = { fg = palette.green },
+  lualine_x_diff_added_normal = { fg = palette.green },
+  lualine_x_diff_added_insert = { fg = palette.green },
+  lualine_x_diff_added_visual = { fg = palette.green },
+  lualine_x_diff_added_replace = { fg = palette.green },
+  lualine_x_diff_added_command = { fg = palette.green },
+  lualine_x_diff_added_terminal = { fg = palette.green },
+  lualine_x_diff_added_inactive = { fg = palette.green },
+  lualine_x_diff_modified_normal = { fg = palette.yellow },
+  lualine_x_diff_modified_insert = { fg = palette.yellow },
+  lualine_x_diff_modified_visual = { fg = palette.yellow },
+  lualine_x_diff_modified_replace = { fg = palette.yellow },
+  lualine_x_diff_modified_command = { fg = palette.yellow },
+  lualine_x_diff_modified_terminal = { fg = palette.yellow },
+  lualine_x_diff_modified_inactive = { fg = palette.yellow },
+  lualine_x_diff_removed_normal = { fg = palette.red },
+  lualine_x_diff_removed_insert = { fg = palette.red },
+  lualine_x_diff_removed_visual = { fg = palette.red },
+  lualine_x_diff_removed_replace = { fg = palette.red },
+  lualine_x_diff_removed_command = { fg = palette.red },
+  lualine_x_diff_removed_terminal = { fg = palette.red },
+  lualine_x_diff_removed_inactive = { fg = palette.red },
+  lualine_x_branch_normal = { fg = palette.blue },
+  lualine_x_branch_insert = { fg = palette.blue },
+  lualine_x_branch_visual = { fg = palette.blue },
+  lualine_x_branch_replace = { fg = palette.blue },
+  lualine_x_branch_command = { fg = palette.blue },
+  lualine_x_branch_terminal = { fg = palette.blue },
+  lualine_x_branch_inactive = { fg = palette.blue }
+}
+
+vim.cmd.colorscheme('dracula')
+vim.cmd.highlight('normal guibg=none')
+require('utils').set_highlight_groups(highlight_groups)
