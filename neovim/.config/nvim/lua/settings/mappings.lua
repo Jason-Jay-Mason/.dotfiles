@@ -18,14 +18,14 @@ M.nvim = {
     -- Reset the file to before changes
     ["<C-r>"] = "<cmd>edit!<cr>",
     -- crl s save
-    ["<C-s>"] = "<cmd>lua vim.lsp.buf.formatting_sync() vim.cmd('w') <cr>",
+    ["<C-s>"] = "<cmd>lua vim.lsp.buf.format() vim.cmd('w') <cr>",
     -- Make detelete a different thing than cut ie make it not copy
     ["x"] = '"_x',
     ['d'] = '"_d',
   },
   i = {
     -- ctr s save
-    ["<C-s>"] = "<cmd>lua vim.lsp.buf.formatting_sync() vim.cmd('w') <cr>",
+    ["<C-s>"] = "<cmd>lua vim.lsp.buf.format() vim.cmd('w') <cr>",
   },
   v = {
     -- Make delete not copy to register
