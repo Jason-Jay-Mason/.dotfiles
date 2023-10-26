@@ -160,8 +160,8 @@
     </property>
     <property name="plugin-26" type="string" value="whiskermenu">
       <property name="recent" type="array">
-        <value type="string" value="Alacritty.desktop"/>
         <value type="string" value="firefox.desktop"/>
+        <value type="string" value="Alacritty.desktop"/>
         <value type="string" value="eos-update-notifier-configure.desktop"/>
         <value type="string" value="xfce-wm-settings.desktop"/>
         <value type="string" value="xfce-ui-settings.desktop"/>
