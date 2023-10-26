@@ -1,16 +1,19 @@
-local ok, blankline = pcall(require, 'indent_blankline')
+local ok, blankline = pcall(require, 'ibl')
 
-if not ok then
+if not ok  then
   return
 end
 
 vim.opt.list = true
 
+vim.api.nvim_set_hl(0, "Indent", {fg="#1f1d2e"})
+
 blankline.setup({
-  show_end_of_line = true,
-  show_current_context = true,
-  show_current_context_start = true,
-  char_highlight_list = {
-    "IndentBlankLineIndent1",
+  indent = {
+    highlight = "Indent",
+    char = "┊"
+  },
+  scope = {
+    highlight = "Comment"
   }
 })

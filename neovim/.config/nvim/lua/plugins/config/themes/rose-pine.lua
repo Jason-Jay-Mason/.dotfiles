@@ -5,7 +5,6 @@ if not ok then
 end
 
 
-
 rosepine.setup({
   dim_nc_background = true,
   disable_background = true,
@@ -30,7 +29,7 @@ local palette = {
 -- Get all highlights: so $VIMRUNTIME/syntax/hitest.vim
 local highlight_groups = {
   --- Blank line indent
-  IndentBlanklineIndent1 = { fg = palette.bg_light },
+['ibl.indent.char.1'] = {fg = palette.cyan},
   -- Telescope
   NormalNC = { bg = palette.none },
   TelescopeNormal = { bg = palette.none },

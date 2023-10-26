@@ -1,35 +1,16 @@
 local ok, packer = pcall(require, 'packer')
 
-local theme = require('settings.colors')
-
 local plugins = function(use)
   -- Packer needs to manage itself of else there are errors
   use { 'wbthomason/packer.nvim' }
 
+  -- Tab lines
+  use { "lukas-reineke/indent-blankline.nvim", config = function() require 'plugins.config.blankline' end }
+
   -- A custom status bar
   use { "hoob3rt/lualine.nvim", as = 'lualine', config = function() require 'plugins.config.lualine' end }
 
-  -- Themeing
-  if theme == 'rose-pine' then
-    use { 'rose-pine/neovim', as = 'rose-pine', config = function() require 'plugins.config.themes.rose-pine' end, after =
-    'lualine' }
-  elseif theme == 'rose-pine-light' then
-    use { 'rose-pine/neovim', as = 'rose-pine', config = function() require 'plugins.config.themes.rose-pine-light' end, after =
-    'lualine' }
-  elseif theme == 'quantum' then
-    use { "kjssad/quantum.vim", config = function() require 'plugins.config.themes.quantum' end, after = 'lualine' }
-  elseif theme == 'dracula' then
-    use { "Mofiqul/dracula.nvim", config = function() require 'plugins.config.themes.dracula' end, after = 'lualine' }
-  elseif theme == 'bluloco' then
-    use { 'uloco/bluloco.nvim', requires = { 'rktjmp/lush.nvim' }, config = function() require 'plugins.config.themes.bluloco' end, after =
-    'lualine' }
-  elseif theme == 'bluloco-macos' then
-    use { 'uloco/bluloco.nvim', requires = { 'rktjmp/lush.nvim' }, config = function() require 'plugins.config.themes.bluloco-macos' end, after =
-    'lualine' }
-  else
-    use { 'rose-pine/neovim', as = 'rose-pine', config = function() require 'plugins.config.themes.rose-pine' end, after =
-    'lualine' }
-  end
+
 
   -- This is to improve loading times with some optimizations
   use { 'lewis6991/impatient.nvim' }
@@ -39,7 +20,7 @@ local plugins = function(use)
   use { 'nvim-tree/nvim-web-devicons', config = function() require 'plugins.config.devicons' end, event = 'BufWinEnter' }
 
   -- Fuzzy finder NOTE cmd specifies a command that must be run in order to load the plugin
-  use { 'nvim-telescope/telescope.nvim', branch = '0.1.1', cmd = 'Telescope', config = function() require 'plugins.config.telescope' end }
+  use { 'nvim-telescope/telescope.nvim', cmd = 'Telescope', config = function() require 'plugins.config.telescope' end }
   -- Plugin for telescope that allows previewing media files
   use { "nvim-telescope/telescope-media-files.nvim", event = 'BufWinEnter' }
   -- Buffers as tabs
@@ -63,10 +44,6 @@ local plugins = function(use)
   -- Live code server
   use { 'metakirby5/codi.vim', even = 'BufWinEnter' }
 
-
-  -- Tab lines
-  use { "lukas-reineke/indent-blankline.nvim", config = function() require 'plugins.config.blankline' end }
-
   -- Make the current context sticky
   use { "nvim-treesitter/nvim-treesitter-context", config = function() require 'plugins.config.treesitter-context' end }
 
@@ -82,6 +59,8 @@ local plugins = function(use)
 
   -- Colorizer (adding inline colors for hex)
   use { "norcalli/nvim-colorizer.lua", config = function() require 'plugins.config.nvim-colorizer' end }
+
+  use { 'rose-pine/neovim', as = 'rose-pine', config = function() require 'plugins.config.themes.rose-pine' end, after ='lualine' }
 
   -- LSP
   use {

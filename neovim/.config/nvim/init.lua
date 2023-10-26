@@ -3,9 +3,8 @@ pcall(require, 'impatient')
 
 require('utils').ensure_packer()
 
-require 'settings'
-
 require 'plugins'
 
+require 'settings'
 -- Load the config for LSP zero
 require 'plugins.config.lsp-zero'
