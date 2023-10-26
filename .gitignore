@@ -1,2 +1,4 @@
 bin/.local/bin
 nvim/.config/plugin/packer_compiled.lua
+xfce4/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+
