@@ -74,6 +74,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (89%)"/>
         <value type="string" value="wi-fi network connection “keep it on the download-5g” active: keep it on the download-5g (95%)"/>
         <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (82%)"/>
         <value type="string" value="wi-fi network connection “keep it on the download” active: keep it on the download (75%)"/>
@@ -160,13 +161,13 @@
     </property>
     <property name="plugin-26" type="string" value="whiskermenu">
       <property name="recent" type="array">
-        <value type="string" value="firefox.desktop"/>
         <value type="string" value="Alacritty.desktop"/>
-        <value type="string" value="eos-update-notifier-configure.desktop"/>
-        <value type="string" value="xfce-wm-settings.desktop"/>
         <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
         <value type="string" value="xfce4-file-manager.desktop"/>
+        <value type="string" value="firefox.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="xfce4-session-logout.desktop"/>
+        <value type="string" value="nvim.desktop"/>
       </property>
       <property name="button-title" type="string" value="Ω Menu"/>
       <property name="button-icon" type="string" value="endeavouros-icon"/>
@@ -195,6 +196,7 @@
         <value type="string" value="xfce4-file-manager.desktop"/>
         <value type="string" value="firefox.desktop"/>
         <value type="string" value="org.xfce.Parole.desktop"/>
+        <value type="string" value="blueman-manager.desktop"/>
         <value type="string" value="firewall-config.desktop"/>
         <value type="string" value="eos-quickstart.desktop"/>
         <value type="string" value="eos-update-notifier-configure.desktop"/>
