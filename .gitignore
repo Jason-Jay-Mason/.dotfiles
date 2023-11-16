@@ -1,4 +1,6 @@
 bin/.local/bin
-neovim/.config/nvim/plugin/*
+neovim/.config/nvim/*
+!neovim/.config/nvim/init.lua
+!neovim/.config/nvim/lua
 xfce4/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 
