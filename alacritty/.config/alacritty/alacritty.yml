@@ -17,9 +17,9 @@ shell:
     - "tmux"
     - "clear"
 font:
-  size: 13
+  size: 14
 window:
-  opacity: 0.998
+  opacity: 0.99
   padding:
     x: 10 
     y: 10 
