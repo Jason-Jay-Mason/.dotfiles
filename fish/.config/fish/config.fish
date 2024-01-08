@@ -13,7 +13,7 @@ if status is-interactive
     end
 
     # Air is a hot reload for go
-    alias air="~/go/bin/air"
+    # alias air="~/go/bin/air"
 
     alias n="nvim"
 
@@ -28,7 +28,7 @@ if status is-interactive
       z $argv && ls
     end
 
-    fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin
+    fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/
     set fish_greeting
 
     # Icons for hydro theme https://github.com/jorgebucaran/hydro
