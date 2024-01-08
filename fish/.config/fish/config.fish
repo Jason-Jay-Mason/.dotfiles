@@ -11,10 +11,7 @@ if status is-interactive
     if is_valid_command logo-ls
       alias ls="logo-ls"
     end
-
-    # Air is a hot reload for go
-    alias air="~/go/bin/air"
-
+    
     alias n="nvim"
 
     #useful functions
@@ -23,12 +20,13 @@ if status is-interactive
       cd $argv && ls
     end
 
-    #z and ls
-    function zl
-      z $argv && ls
+    if is_valid_command z
+      function zl
+        z $argv && ls
+      end
     end
 
-    fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin
+    fish_add_path -p  /usr/local/bin /usr/bin /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc ~/go/bin /usr/local/go/bin /opt/homebrew/bin/fish /opt/homebrew/bin
     set fish_greeting
 
     # Icons for hydro theme https://github.com/jorgebucaran/hydro
@@ -39,3 +37,4 @@ if status is-interactive
     set --global hydro_color_pwd $fish_color_cwd
     set --global hydro_color_prompt $fish_color_param
 end
+
