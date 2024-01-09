@@ -29,6 +29,12 @@ if status is-interactive
     end
 
     fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/
+    switch (uname -s)
+      case "Linux"
+        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/
+      case "Darwin"
+        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /opt/homebrew/bin
+    end
     set fish_greeting
 
     # Icons for hydro theme https://github.com/jorgebucaran/hydro
