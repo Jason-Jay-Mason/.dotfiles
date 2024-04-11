@@ -49,6 +49,6 @@ nvimtree.setup({
 		},
 	},
 	filters = {
-		custom = { ".*_templ.go" },
+		custom = { ".*_templ.go", "venv", "node_modules" },
 	},
 })

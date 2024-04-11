@@ -12,7 +12,7 @@ telescope.load_extension("media_files")
 
 telescope.setup({
 	defaults = {
-		file_ignore_patterns = { "node_modules", "tmp", ".*_templ.go" },
+		file_ignore_patterns = { "node_modules", "tmp", ".*_templ.go", ".*.min.js", "venv" },
 		results_title = false,
 		dynamic_preview_title = true,
 		prompt_prefix = "   ",
