@@ -103,19 +103,23 @@ ins_right({
   cond = conditions.hide_in_width,
 })
 
+
 ins_right({
   -- Lsp server name .
   function()
-    local msg = "No Active Lsp"
+    local msg = "none"
     local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
     local clients = vim.lsp.get_active_clients()
-    if next(clients) == nil then
-      return msg
-    end
+
     for _, client in ipairs(clients) do
       local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return client.name
+      -- and vim.fn.index(filetypes, buf_ft) ~= -1
+      if filetypes then
+        if msg == "none" then
+          msg = client.name
+        else
+          msg = msg .. "," .. client.name
+        end
       end
     end
     return msg

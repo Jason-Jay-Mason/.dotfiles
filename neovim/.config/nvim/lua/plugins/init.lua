@@ -133,7 +133,9 @@ local plugins = function(use)
 			{ "neovim/nvim-lspconfig" }, -- Required
 			{ "williamboman/mason.nvim" }, -- Optional
 			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
-			{ "jose-elias-alvarez/null-ls.nvim" },
+			-- Formatting replacing null ls
+			{ "nvimdev/guard.nvim" },
+			{ "nvimdev/guard-collection" },
 
 			-- Autocompletion
 			{ "hrsh7th/nvim-cmp" }, -- Required
