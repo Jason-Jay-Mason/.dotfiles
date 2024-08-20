@@ -7,9 +7,6 @@ end
 treesitter.setup({
   ensure_installed = { 'javascript', 'lua', 'vim', 'go', 'python', 'ql', 'css', 'vue', 'typescript', 'html', 'scss' },
   auto_install = true,
-  autotag = {
-    enable = true,
-  },
   highlight = {
     enable = true, -- false will disable the whole extension
     additional_vim_regex_highlighting = false,
