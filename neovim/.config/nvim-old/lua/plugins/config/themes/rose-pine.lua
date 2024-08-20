@@ -29,7 +29,7 @@ local palette = {
 -- Get all highlights: so $VIMRUNTIME/syntax/hitest.vim
 local highlight_groups = {
   --- Blank line indent
-['ibl.indent.char.1'] = {fg = palette.cyan},
+  ['ibl.indent.char.1'] = { fg = palette.cyan },
   -- Telescope
   NormalNC = { bg = palette.none },
   TelescopeNormal = { bg = palette.none },
@@ -49,6 +49,7 @@ local highlight_groups = {
   BufferLineBufferSelected = { bg = palette.none },
   BufferLineFill = { bg = palette.none },
   -- Lualine
+  -- vim.api.nvim_set_hl(0, name, value)
   lualine_c_mode_normal = { fg = palette.fg_med, bold = true },
   lualine_c_mode_insert = { fg = palette.magenta, bold = true },
   lualine_c_mode_visual = { fg = palette.yellow, bold = true },
@@ -127,6 +128,7 @@ local highlight_groups = {
   lualine_x_branch_terminal = { fg = palette.cyan, bold = true },
   lualine_x_branch_inactive = { fg = palette.cyan, bold = true }
 }
+
 
 vim.cmd.colorscheme('rose-pine')
 vim.cmd.highlight('normal guibg=none')

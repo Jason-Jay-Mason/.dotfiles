@@ -3,59 +3,23 @@ if not ok then
   return
 end
 
-local lsp_attach = function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp.default_keymaps({ buffer = bufnr })
-end
-
-
-
-
-lsp.extend_lspconfig({
-  capabilities = require('cmp_nvim_lsp').default_capabilities(),
-  lsp_attach = lsp_attach,
-  float_border = 'rounded',
-  sign_text = {
-    error = " ",
-    warn = " ",
-    hint = " ",
-    info = " ",
-  },
-})
-
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {},
-  handlers = {
-    function(server_name)
-      require('lspconfig')[server_name].setup({})
-    end,
-    lua_ls = function()
-      require('lspconfig').lua_ls.setup({
-        on_init = function(client)
-          lsp.nvim_lua_settings(client, {})
-        end,
-      })
-    end,
-  }
-})
-
-vim.diagnostic.config({
-  virtual_text = true,
-  severity_sort = true,
-  float = {
-    style = 'minimal',
-    border = 'rounded',
-    source = 'always',
-    header = '',
-    prefix = '',
-  },
-})
-
 require("plugins.config.cmp")
 
-
+--initial setup
+lsp.preset({
+  name = "minimal",
+  set_lsp_keymaps = true,
+  manage_nvim_cmp = false,
+  suggest_lsp_servers = true,
+})
+lsp.set_sign_icons({
+  error = " ",
+  warn = " ",
+  hint = " ",
+  info = " ",
+})
+lsp.nvim_workspace()
+lsp.setup()
 
 -- custom lsp configuration
 local config = require("lspconfig")

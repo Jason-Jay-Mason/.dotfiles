@@ -1,10 +1,7 @@
---Speed up loading Lua modules in Neovim to improve startup time.
-pcall(require, 'impatient')
+require("utils").ensure_lazynvim()
 
-require('utils').ensure_packer()
+require "settings"
 
-require 'plugins'
+require("lazy").setup("plugins")
 
-require 'settings'
--- Load the config for LSP zero
-require 'plugins.config.lsp-zero'
+require "settings.highlights"
