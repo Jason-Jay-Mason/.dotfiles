@@ -79,16 +79,15 @@ config.tailwindcss.setup({
   },
 })
 
-config.unocss.setup({
-  filetypes = { "svelte", "html", "templ", "tsx" },
-  root_dir = config.util.root_pattern("tsconfig.json", "package.json", ".git", "Makefile"),
-  init_options = {
-    userLanguages = {
-      templ = "html",
-    },
-  },
-
-})
+-- config.unocss.setup({
+--   filetypes = { "svelte", "html", "templ", "tsx" },
+--   root_dir = config.util.root_pattern("tsconfig.json", "package.json", ".git", "Makefile"),
+--   init_options = {
+--     userLanguages = {
+--       templ = "html",
+--     },
+--   },
+-- })
 
 config.templ.setup({})
 
