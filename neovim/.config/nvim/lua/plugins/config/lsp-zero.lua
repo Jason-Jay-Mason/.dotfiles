@@ -65,19 +65,19 @@ config.phpactor.setup({
   filetypes = { "php" }
 })
 
-config.htmx.setup({
-  filetypes = { "html", "templ" },
-})
+-- config.htmx.setup({
+--   filetypes = { "html", "templ" },
+-- })
 
-config.tailwindcss.setup({
-  filetypes = { "svelte", "html", "templ", "tsx" },
-  root_dir = config.util.root_pattern("tsconfig.json", "package.json", ".git", "Makefile"),
-  init_options = {
-    userLanguages = {
-      templ = "html",
-    },
-  },
-})
+-- config.tailwindcss.setup({
+--   filetypes = { "svelte", "html", "templ", "tsx" },
+--   root_dir = config.util.root_pattern("tsconfig.json", "package.json", ".git", "Makefile"),
+--   init_options = {
+--     userLanguages = {
+--       templ = "html",
+--     },
+--   },
+-- })
 
 -- config.unocss.setup({
 --   filetypes = { "svelte", "html", "templ", "tsx" },
