@@ -46,13 +46,13 @@ end
 
 M.get_popup_size = function()
   local screen_w = opt.columns:get()
-  local screen_h = opt.lines:get() - opt.cmdheight:get()
+  local screen_h = opt.lines:get()
   local window_w = screen_w * 1
   local window_h = screen_h * 0.98
   local window_w_int = math.floor(window_w)
   local window_h_int = math.floor(window_h)
   local center_x = (screen_w - window_w) / 2
-  local center_y = ((opt.lines:get() - window_h) / 2) - opt.cmdheight:get()
+  local center_y = ((opt.lines:get() - window_h) / 2)
   return {
     screen_w = screen_w,
     screen_h = screen_h,
