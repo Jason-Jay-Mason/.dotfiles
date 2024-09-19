@@ -1,18 +1,17 @@
--- deps:
-require('img-clip').setup({
-  -- use recommended settings from above
-})
-require('copilot').setup({
-  -- use recommended settings from above
-})
-require('render-markdown').setup({
-  -- use recommended settings from above
-})
-require('avante_lib').load()
+--dependencies
+local ok, avante = pcall(function()
+  require('img-clip').setup({})
+  require('copilot').setup({})
+  require('render-markdown').setup({})
+  require('avante_lib').load()
+  local a = require("avante")
+  return a
+end)
+if not ok then
+  return
+end
 
-local get_window = require("utils").get_popup_size
-local win = get_window()
-require('avante').setup({
+avante.setup({
   ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
   provider = "claude",                  -- Recommend using Claude
   auto_suggestions_provider = "claude", -- Since auto-suggestions are a high-frequency operation and therefore expensive, it is recommended to specify an inexpensive provider or even a free provider: copilot

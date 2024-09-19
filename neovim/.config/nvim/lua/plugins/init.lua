@@ -64,7 +64,7 @@ return {
     "VonHeikemen/lsp-zero.nvim",
     branch = 'v4.x',
     config = function()
-      require("plugins.config.lsp-zero")
+      require("plugins.config.lsp")
     end,
     dependencies = {
       "williamboman/mason.nvim",
@@ -113,7 +113,7 @@ return {
       require("plugins.config.nvim-colorizer")
     end,
   },
-  -- cursor like environment
+  -- cursor like environment ai assistant
   {
     "yetone/avante.nvim",
     event = "VeryLazy",
