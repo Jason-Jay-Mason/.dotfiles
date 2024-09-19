@@ -11,6 +11,12 @@ if status is-interactive
     if is_valid_command logo-ls
       alias ls="logo-ls"
     end
+    
+    if is_valid_command tmux
+      if not tmux info | grep -q "Terminal"
+        tmux
+      end
+    end
 
     # Air is a hot reload for go
     # alias air="~/go/bin/air"
@@ -33,7 +39,7 @@ if status is-interactive
       case "Linux"
         fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/
       case "Darwin"
-        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /opt/homebrew/bin
+        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /opt/homebrew/bin ~/.local/share/nvm/
     end
     set fish_greeting
 
