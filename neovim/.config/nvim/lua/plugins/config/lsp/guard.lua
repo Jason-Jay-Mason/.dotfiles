@@ -6,9 +6,9 @@ end
 ft('typescript,javascript,typescriptreact'):fmt('prettier')
 
 
-require('guard').setup({
+vim.g.guard_config = {
   -- Choose to format on every write to a buffer
   fmt_on_save = true,
   -- Use lsp if no formatter was defined for this filetype
   lsp_as_default_formatter = false,
-})
+}
