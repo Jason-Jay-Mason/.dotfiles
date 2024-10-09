@@ -61,11 +61,11 @@ avante.setup({
   hints = { enabled = true },
   windows = {
     ---@type "right" | "left" | "top" | "bottom"
-    position = "left", -- the position of the sidebar
-    width = 50,
-    wrap = true,       -- similar to vim.o.wrap
+    position = "bottom", -- the position of the sidebar
+    height = 50,
+    wrap = true,         -- similar to vim.o.wrap
     sidebar_header = {
-      align = "left",  -- left, center, right for title
+      align = "left",    -- left, center, right for title
       rounded = false,
     },
   },
