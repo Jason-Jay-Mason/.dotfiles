@@ -12,27 +12,6 @@ api.nvim_create_autocmd({ "RecordingLeave" }, {
 })
 
 --HACK: this is needed because of the stupid svelte lsp, for some reason it is not seeing new exports in ts files
---TODO:Let's see if we need this anymore
--- function on_attach(on_attach)
--- 	vim.api.nvim_create_autocmd("LspAttach", {
--- 		callback = function(args)
--- 			local buffer = args.buf
--- 			local client = vim.lsp.get_client_by_id(args.data.client_id)
--- 			on_attach(client, buffer)
--- 		end,
--- 	})
--- end
---
--- on_attach(function(client, _)
--- 	if client.name == "svelte" then
--- 		vim.api.nvim_create_autocmd("BufWritePost", {
--- 			pattern = { "*.js", "*.ts" },
--- 			callback = function(ctx)
--- 				client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
--- 			end,
--- 		})
--- 	end
--- end)
 
 -- To open all new buffers as full windows
 local fullScreenFileTypes = { "qf" }

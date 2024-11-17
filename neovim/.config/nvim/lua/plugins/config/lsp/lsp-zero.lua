@@ -47,7 +47,7 @@ masonLspConf.setup({
 })
 
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
   severity_sort = true,
   float = {
     style = 'minimal',

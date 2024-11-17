@@ -68,8 +68,8 @@ return {
     end,
     dependencies = {
       "williamboman/mason.nvim",
-      "neovim/nvim-lspconfig",             -- Required
       "williamboman/mason.nvim",           -- Optional
+      "neovim/nvim-lspconfig",             -- Required
       "williamboman/mason-lspconfig.nvim", -- Optional
       -- Formatting replacing null ls
       "nvimdev/guard.nvim",
