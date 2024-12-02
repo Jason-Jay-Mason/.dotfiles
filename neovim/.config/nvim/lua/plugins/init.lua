@@ -113,6 +113,23 @@ return {
       require("plugins.config.nvim-colorizer")
     end,
   },
+  -- git environment for nvim
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = false,
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+  },
   -- cursor like environment ai assistant
   {
     "yetone/avante.nvim",

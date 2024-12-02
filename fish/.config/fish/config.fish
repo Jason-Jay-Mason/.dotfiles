@@ -7,16 +7,19 @@ if status is-interactive
         end
     end
 
-    # logo-ls is for icons for ls https://github.com/Yash-Handa/logo-ls
-    if is_valid_command logo-ls
-      alias ls="logo-ls"
-    end
-    
+  #auto start tmux
     if is_valid_command tmux
       if not tmux info | grep -q "Terminal"
         tmux
       end
     end
+
+    # logo-ls is for icons for ls https://github.com/Yash-Handa/logo-ls
+    #if is_valid_command logo-ls
+    #  alias ls="logo-ls"
+    #end
+    
+
 
     # Air is a hot reload for go
     # alias air="~/go/bin/air"
@@ -24,20 +27,11 @@ if status is-interactive
     alias n="nvim"
 
     #useful functions
-    #cd and ls
-    function cdl
-      cd $argv && ls
-    end
-
-    #z and ls
-    function zl
-      z $argv && ls
-    end
 
     fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ ~/.fly/bin
     switch (uname -s)
       case "Linux"
-        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/
+        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /home/jason/.cargo/bin/
       case "Darwin"
         fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /opt/homebrew/bin ~/.local/share/nvm/
     end
@@ -55,3 +49,8 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+#fzf
+#set -x FZF_DEFAULT_OPTS '--height 40% --tmux bottom,40% --layout reverse --border top'
+#set -gx FZF_DEFAULT_OPTS "--preview 'devicon-lookup {} && bat --style=numbers --color=always {}'"
+set -gx FZF_DEFAULT_OPTS "--preview 'bat --color=always --plain --theme=ansi {}' --preview-window '~3,noborder' --color=16"
