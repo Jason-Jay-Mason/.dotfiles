@@ -63,6 +63,10 @@ if status is-interactive
         end
     end
 
+    function ll
+        command logo-ls -l 
+    end
+
     function search_cmd_history
         set -l result (history | fzf $FZF_NO_PREVIEW_OPTS)
         if test -n "$result"
