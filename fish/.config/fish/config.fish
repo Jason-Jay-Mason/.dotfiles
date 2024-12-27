@@ -23,9 +23,9 @@ if status is-interactive
     #useful functions
 
     #logo ls instead of ls
-    #function ls
-    #    logo-ls $argv
-    #end
+    function ls
+        logo-ls $argv
+    end
 
     #fzf funcs
       set -gx FZF_PREVIEW_OPTS \
@@ -55,7 +55,7 @@ if status is-interactive
        end
     end
 
-    function ls
+    function fls
         if contains -- '-a' $argv
             fzf_with_icons "fd --hidden --exclude .git --max-depth 1" "cd" $FZF_PREVIEW_OPTS
         else

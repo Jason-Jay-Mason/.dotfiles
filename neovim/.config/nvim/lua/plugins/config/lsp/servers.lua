@@ -13,9 +13,11 @@ config.phpactor.setup({
 
 config.templ.setup({})
 
+
+
 -- HACK:Svelte has a noob lsp implimentation, therefore they depened on vs code's file watching, we need to mimick that here and let svelte ls know when a ts or js file has changed
 config.svelte.setup({
-  on_attach = function (client)
+  on_attach = function(client)
     vim.api.nvim_create_autocmd("BufWritePost", {
       pattern = { "*.js", "*.ts" },
       group = vim.api.nvim_create_augroup("svelte_ondidchangetsorjsfile", { clear = true }),
@@ -77,6 +79,3 @@ config.svelte.setup({
 --     },
 --   },
 -- })
-
-
-

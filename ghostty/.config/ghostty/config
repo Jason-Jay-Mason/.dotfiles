@@ -1,0 +1,23 @@
+command = /usr/bin/fish -l -c "tmux attach || tmux"
+theme=rose-pine
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration=none
+window-decoration = true
+gtk-titlebar = false
+term = xterm-256color
+
+window-theme=system
+gtk-adwaita=false
+window-padding-x = 10
+window-padding-y = 10
+
+minimum-contrast = 1.0 
+bold-is-bright = false
+
+cursor-opacity = 0.5
+
+font-family = "Hack"
+font-feature = calt    # Enable ligatures
+

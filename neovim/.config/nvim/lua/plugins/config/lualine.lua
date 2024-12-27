@@ -64,11 +64,6 @@ lualine.setup({
     globalstatus = false,
     component_separators = "",
     section_separators = "",
-    refresh = {
-      statusline = 1000,
-      tabline = 1000,
-      winbar = 1000,
-    }
   },
 
   sections = {
@@ -76,7 +71,7 @@ lualine.setup({
       {
         'mode',
         fmt = function(name, _)
-          return "✝"
+          return "󰥓"
         end,
         padding = { right = 1 },
       }
@@ -135,7 +130,7 @@ lualine.setup({
           end
           return msg
         end,
-        icon = "",
+        icon = " ",
         color = { fg = palette.fg_med, gui = "italic" },
       },
       {
