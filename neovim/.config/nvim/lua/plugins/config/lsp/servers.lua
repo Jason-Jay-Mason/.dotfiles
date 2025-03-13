@@ -7,9 +7,9 @@ end
 
 -- vim.lsp.set_log_level('debug')
 
-config.phpactor.setup({
-  filetypes = { "php" }
-})
+-- config.phpactor.setup({
+--   filetypes = { "php" }
+-- })
 
 config.templ.setup({})
 

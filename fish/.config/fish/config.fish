@@ -102,7 +102,7 @@ if status is-interactive
       case "Linux"
         fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /home/jason/.cargo/bin/
       case "Darwin"
-        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /opt/homebrew/bin ~/.local/share/nvm/
+        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /opt/homebrew/bin ~/.local/share/nvm/ ~/Library/Application\ Support/Coursier/bin
     end
     set fish_greeting
 
@@ -123,3 +123,7 @@ set --export PATH $BUN_INSTALL/bin $PATH
 #set -gx FZF_DEFAULT_OPTS "--preview 'bat --color=always --plain --theme=ansi {}' --preview-window '~3,noborder' --color=16"
 
 
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :

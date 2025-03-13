@@ -135,6 +135,12 @@ return {
       "nvim-lua/plenary.nvim",
     },
   },
+  -- tiny go to work with gols (don't ask my why this is needed instead of a quick go get)
+  {
+    "pcolladosoto/tinygo.nvim",
+    lazy = false,
+    config = function() require("tinygo").setup() end
+  },
   -- cursor like environment ai assistant
   -- {
   --   "yetone/avante.nvim",
