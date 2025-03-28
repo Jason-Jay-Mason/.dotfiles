@@ -113,7 +113,7 @@ neogit.setup {
     },
   },
   commit_editor = {
-    kind = "replace",
+    kind = "tab",
     show_staged_diff = true,
     -- Accepted values:
     -- "split" to show the staged diff below the commit editor
