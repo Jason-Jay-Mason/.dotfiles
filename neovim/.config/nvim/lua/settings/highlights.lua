@@ -4,7 +4,7 @@ if not ok then
   return
 end
 
-vim.cmd.colorscheme('rose-pine')
+vim.cmd.colorscheme(palette.theme)
 vim.cmd.highlight('normal guibg=none')
 
 -- Get all highlights: so $VIMRUNTIME/syntax/hitest.vim
@@ -36,7 +36,7 @@ local highlight_groups = {
   BufferLinePickSelected = { bg = palette.bg_darker },
   BufferLineIndicatorVisible = { bg = palette.none },
   BufferLineIndicatorSelected = { bg = palette.green, fg = palette.bg },
-  BufferLineTabSeparatorSelected = { bg = palette.bg_darker },
+  BufferLineTabSeparatorSelected = { bg = palette.green },
   BufferLineTabSeparator = { bg = palette.none },
   BufferLineError = { bg = palette.none, fg = palette.red },
   BufferLineSeparatorSelected = { bg = palette.bg_darker },

@@ -10,7 +10,7 @@ local actions = require("telescope.actions")
 -- Loads extension for media files
 telescope.load_extension("media_files")
 
-telescope.load_extension("lazygit")
+-- telescope.load_extension("lazygit")
 
 telescope.setup({
   defaults = {

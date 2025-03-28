@@ -43,7 +43,7 @@ M.lsp = {
     ['gi'] = '<cmd>lua vim.lsp.buf.implementation()<CR>',
     ['gf'] = '<cmd>lua vim.lsp.buf.definition()<CR>',
     ['gD'] = '<cmd>lua vim.lsp.buf.declaration()<CR>',
-    ['gt'] = '<cmd>lua vim.lsp.buf.type_definition()<CR>',
+    -- ['gt'] = '<cmd>lua vim.lsp.buf.type_definition()<CR>',
   }
 }
 
@@ -52,6 +52,12 @@ M.telescope = {
     ['<leader>f'] = '<cmd>Telescope find_files<cr>',
     ['<leader>e'] = '<cmd>Telescope diagnostics<cr>',
     ['<leader>g'] = '<cmd>Telescope live_grep<cr>',
+  }
+}
+
+M.neogit = {
+  n = {
+    ['<leader>G'] = '<cmd>Neogit<cr>',
   }
 }
 
