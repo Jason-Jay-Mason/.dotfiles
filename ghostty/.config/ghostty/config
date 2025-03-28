@@ -1,6 +1,6 @@
 # command = /usr/bin/fish -l -c "tmux attach || tmux"
 command = /opt/homebrew/bin/fish -l -c "tmux attach || tmux"
-theme=rose-pine
+theme = dark:rose-pine, light:rose-pine-dawn
 
 cursor-style = block
 cursor-style-blink = false
@@ -11,8 +11,8 @@ term = xterm-256color
 
 window-theme=system
 gtk-adwaita=false
-window-padding-x = 50
-window-padding-y = 20
+window-padding-x = 30
+window-padding-y = 10
 
 minimum-contrast = 1.0 
 bold-is-bright = false
