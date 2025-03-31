@@ -22,6 +22,7 @@ return {
     end,
   },
   -- Fuzzy finder NOTE cmd specifies a command that must be run in order to load the plugin
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
@@ -31,9 +32,10 @@ return {
     end,
     dependencies = {
       "nvim-lua/popup.nvim",
-      "nvim-telescope/telescope-media-files.nvim"
+      "nvim-telescope/telescope-media-files.nvim",
     }
   },
+
   -- Buffers as tabs
   {
 
@@ -131,7 +133,6 @@ return {
 
       -- Only one of these is needed.
       "nvim-telescope/telescope.nvim", -- optional
-      "ibhagwan/fzf-lua",              -- optional
       "echasnovski/mini.pick",         -- optional
     },
   },

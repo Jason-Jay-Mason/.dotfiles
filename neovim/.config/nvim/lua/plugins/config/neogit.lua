@@ -76,7 +76,7 @@ neogit.setup {
   -- Default for new branch name prompts
   initial_branch_name = "",
   -- Change the default way of opening neogit
-  kind = "replace",
+  kind = "tab",
   -- Disable line numbers
   disable_line_numbers = true,
   -- Disable relative line numbers
@@ -125,7 +125,7 @@ neogit.setup {
     spell_check = true,
   },
   commit_select_view = {
-    kind = "replace",
+    kind = "tab",
   },
   commit_view = {
     kind = "vsplit",
@@ -156,10 +156,10 @@ neogit.setup {
     kind = "split",
   },
   stash = {
-    kind = "replace",
+    kind = "tab",
   },
   refs_view = {
-    kind = "replace",
+    kind = "tab",
   },
   signs = {
     -- { CLOSED, OPENED }
