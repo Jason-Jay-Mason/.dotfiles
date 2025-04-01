@@ -1,7 +1,6 @@
-# command = /usr/bin/fish -l -c "tmux attach || tmux"
-# command = /opt/homebrew/bin/fish -l -c "tmux attach || tmux"
-theme=rose-pine
 config-file = xfce/config
+
+theme=rose-pine
 
 cursor-style = block
 cursor-style-blink = false
