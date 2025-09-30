@@ -1,7 +1,6 @@
 command = /usr/bin/fish -l -c "tmux attach || tmux"
 
 gtk-titlebar = false
-gtk-adwaita=false
 gtk-titlebar = false
 
 window-padding-x = 20

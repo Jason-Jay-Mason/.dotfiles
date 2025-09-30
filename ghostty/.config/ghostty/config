@@ -1,6 +1,6 @@
 config-file = xfce/config
 
-theme=rose-pine
+theme=Rose Pine
 
 cursor-style = block
 cursor-style-blink = false
@@ -10,7 +10,6 @@ gtk-titlebar = false
 term = xterm-256color
 
 window-theme=system
-gtk-adwaita=false
 window-padding-x = 30
 window-padding-y = 10
 

@@ -147,7 +147,12 @@ if status is-interactive
     set fish_greeting
 
     # Icons for hydro theme https://github.com/jorgebucaran/hydro
-    set --global hydro_symbol_prompt '󰈺'
+    switch (uname -s)
+      case "Linux"
+        set --global hydro_symbol_prompt '󰈺 '
+      case "Darwin"
+        set --global hydro_symbol_prompt '󰈺'
+    end
     set --global hydro_symbol_git_dirty ' ≠ '
     set --global hydro_symbol_git_ahead '↑  '
     set --global hydro_symbol_git_behind '↓  '
