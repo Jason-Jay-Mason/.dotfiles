@@ -100,6 +100,7 @@ return {
 	-- git environment for nvim
 	{
 		"NeogitOrg/neogit",
+		cmd = "Neogit",
 		lazy = true,
 		config = function()
 			require("plugins.config.neogit")
