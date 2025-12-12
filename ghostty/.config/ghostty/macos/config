@@ -1,0 +1,4 @@
+command = /opt/homebrew/bin/fish -l -c "tmux attach || tmux"
+
+window-padding-x = 50
+window-padding-y = 20
