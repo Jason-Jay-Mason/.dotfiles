@@ -140,9 +140,18 @@ if status is-interactive
     fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ ~/.fly/bin
     switch (uname -s)
       case "Linux"
-        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /home/jason/.cargo/bin/
+        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /home/jason/.cargo/bin/ 
       case "Darwin"
-        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /opt/homebrew/bin ~/.local/share/nvm/ ~/Library/Application\ Support/Coursier/bin
+        fish_add_path -p /etc/profile  
+        fish_add_path -p ~/.bash_profile 
+        fish_add_path -p /etc/bash.bashrc
+        fish_add_path -p ~/.bashrc
+        fish_add_path -p /usr/local/go/bin
+        fish_add_path -p ~/go/bin/
+        fish_add_path -p /opt/homebrew/bin
+        fish_add_path -p ~/.local/share/nvm/
+        fish_add_path -p ~/Library/Application
+        fish_add_path -p /opt/homebrew/Cellar/zigup/2025.05.24/bin
     end
     set fish_greeting
 
