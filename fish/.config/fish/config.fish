@@ -1,4 +1,54 @@
 if status is-interactive
+    #INFO: paths
+    fish_add_path -p ~/.fly/bin
+    switch (uname -s)
+      case "Linux"
+        fish_add_path -p /etc/profile
+        fish_add_path -p ~/.bash_profile
+        fish_add_path -p /etc/bash.bashrc
+        fish_add_path -p ~/.bashrc
+        fish_add_path -p /usr/local/go/bin
+        fish_add_path -p ~/go/bin/
+        fish_add_path -p /home/jason/.cargo/bin/ 
+      case "Darwin"
+        fish_add_path -p /opt/homebrew/bin
+        fish_add_path -p /etc/profile  
+        fish_add_path -p ~/.bash_profile 
+        fish_add_path -p /etc/bash.bashrc
+        fish_add_path -p ~/.bashrc
+        fish_add_path -p /usr/local/go/bin
+        fish_add_path -p ~/go/bin/
+        fish_add_path -p ~/.local/share/nvm/
+        fish_add_path -p ~/Library/Application
+        fish_add_path -p /opt/homebrew/Cellar/zigup/2025.05.24/bin
+    end
+
+    #bun path vars
+    set --export BUN_INSTALL "$HOME/.bun"
+    set --export PATH $BUN_INSTALL/bin $PATH
+
+    # Added by OrbStack: command-line tools and integration
+    # This won't be added again if you remove it.
+    source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+
+
+    #INFO: fish theme and styling
+    set fish_greeting
+    # Icons for hydro theme https://github.com/jorgebucaran/hydro
+    switch (uname -s)
+      case "Linux"
+        set --global hydro_symbol_prompt '󰈺 '
+      case "Darwin"
+        set --global hydro_symbol_prompt '󰈺'
+    end
+    set --global hydro_symbol_git_dirty ' ≠ '
+    set --global hydro_symbol_git_ahead '↑  '
+    set --global hydro_symbol_git_behind '↓  '
+    set --global hydro_color_pwd $fish_color_cwd
+    set --global hydro_color_prompt $fish_color_param
+
+
+    #INFO: TMUX
     function is_valid_command
         if which $argv[1] > /dev/null
             true
@@ -14,19 +64,25 @@ if status is-interactive
       end
     end
 
+    #INFO: ALIASES
 
     # Air is a hot reload for go
     # alias air="~/go/bin/air"
-
     alias n="nvim"
 
-    #useful functions
-
-    #logo ls instead of ls
+    #logo ls instead of ls and ll; we like logos around here
     function ls
         logo-ls $argv
     end
+    function ll
+        command logo-ls -l 
+    end
 
+
+
+    #INFO: FUNCTIONS
+
+    #Small plugin to help with easy decryption of secrets file as to never commit secrets to repos
     function secrets
         if test "$argv[1]" = "open"
             # Check if secrets.locked.yml exists in current directory
@@ -67,7 +123,7 @@ if status is-interactive
         end
     end
 
-    #fzf funcs
+    #fzf opts for funcs
       set -gx FZF_PREVIEW_OPTS \
        --ansi \
        --layout=reverse \
@@ -103,10 +159,6 @@ if status is-interactive
         end
     end
 
-    function ll
-        command logo-ls -l 
-    end
-
     function search_cmd_history
         set -l result (history | fzf $FZF_NO_PREVIEW_OPTS)
         if test -n "$result"
@@ -135,49 +187,6 @@ if status is-interactive
         end
     end
     bind \t 'tab_complete_to_fzf'
-
-
-    fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ ~/.fly/bin
-    switch (uname -s)
-      case "Linux"
-        fish_add_path -p /etc/profile ~/.bash_profile /etc/bash.bashrc ~/.bashrc /usr/local/go/bin ~/go/bin/ /home/jason/.cargo/bin/ 
-      case "Darwin"
-        fish_add_path -p /etc/profile  
-        fish_add_path -p ~/.bash_profile 
-        fish_add_path -p /etc/bash.bashrc
-        fish_add_path -p ~/.bashrc
-        fish_add_path -p /usr/local/go/bin
-        fish_add_path -p ~/go/bin/
-        fish_add_path -p /opt/homebrew/bin
-        fish_add_path -p ~/.local/share/nvm/
-        fish_add_path -p ~/Library/Application
-        fish_add_path -p /opt/homebrew/Cellar/zigup/2025.05.24/bin
-    end
-    set fish_greeting
-
-    # Icons for hydro theme https://github.com/jorgebucaran/hydro
-    switch (uname -s)
-      case "Linux"
-        set --global hydro_symbol_prompt '󰈺 '
-      case "Darwin"
-        set --global hydro_symbol_prompt '󰈺'
-    end
-    set --global hydro_symbol_git_dirty ' ≠ '
-    set --global hydro_symbol_git_ahead '↑  '
-    set --global hydro_symbol_git_behind '↓  '
-    set --global hydro_color_pwd $fish_color_cwd
-    set --global hydro_color_prompt $fish_color_param
 end
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
 
-#fzf
-#set -gx FZF_DEFAULT_OPTS "--preview 'bat --color=always --plain --theme=ansi {}' --preview-window '~3,noborder' --color=16"
-
-
-
-# Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
