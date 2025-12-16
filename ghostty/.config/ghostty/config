@@ -1,49 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 config-file = xfce/config
-
 theme=Rose Pine
-
 cursor-style = block
 cursor-style-blink = false
-=======
->>>>>>> 3480f60
-# command = /usr/bin/fish -l -c "tmux attach || tmux"
-# gtk-titlebar = false
-# gtk-adwaita=false
 command=/opt/homebrew/bin/fish -l -c "tmux attach || tmux"
-theme = Rose Pine
-cursor-style=block
-cursor-style-blink=false
-<<<<<<< HEAD
-=======
->>>>>>> 0de8d3a (Add paths, update ghosty config)
->>>>>>> 3480f60
 shell-integration=none
 window-decoration = true
-
 term = xterm-256color
-
 window-theme=system
-<<<<<<< HEAD
-window-padding-x=30
-window-padding-y=10
-=======
-<<<<<<< HEAD
 window-padding-x = 30
 window-padding-y = 10
-=======
-window-padding-x=30
-window-padding-y=10
->>>>>>> 0de8d3a (Add paths, update ghosty config)
->>>>>>> 3480f60
-
 minimum-contrast=1.0 
 bold-is-bright=false
-
 cursor-opacity=0.5
-
 font-family="Hack"
 font-feature=calt   
-font-size=20 
+font-size=20
