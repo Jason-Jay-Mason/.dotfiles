@@ -8,7 +8,7 @@ if status is-interactive
         fish_add_path -p /etc/bash.bashrc
         fish_add_path -p ~/.bashrc
         fish_add_path -p /usr/local/go/bin
-        fish_add_path -p ~/.goenv/bin/
+        fish_add_path -p ~/go/bin/
         fish_add_path -p /home/jason/.cargo/bin/ 
       case "Darwin"
         fish_add_path -p /opt/homebrew/bin
