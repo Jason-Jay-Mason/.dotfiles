@@ -3,18 +3,18 @@
 -- vim.lsp.set_log_level('debug')
 
 -- HACK:Svelte has a noob lsp implimentation, therefore they depened on vs code's file watching, we need to mimick that here and let svelte ls know when a ts or js file has changed
--- config.svelte.setup({
---   on_attach = function(client)
---     vim.api.nvim_create_autocmd("BufWritePost", {
---       pattern = { "*.js", "*.ts" },
---       group = vim.api.nvim_create_augroup("svelte_ondidchangetsorjsfile", { clear = true }),
---       callback = function(ctx)
---         -- Here use ctx.match instead of ctx.file
---         client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
---       end,
---     })
---   end
--- })
+vim.lsp.config["svelte"] = {
+  on_attach = function(client)
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      pattern = { "*.js", "*.ts" },
+      group = vim.api.nvim_create_augroup("svelte_ondidchangetsorjsfile", { clear = true }),
+      callback = function(ctx)
+        -- Here use ctx.match instead of ctx.file
+        client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+      end,
+    })
+  end
+}
 
 -- config.tailwindcss.setup({
 --   filetypes = { "svelte", "html", "templ", "tsx" },
