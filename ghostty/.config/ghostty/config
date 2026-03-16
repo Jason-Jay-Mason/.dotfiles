@@ -1,4 +1,3 @@
-config-file = xfce/config
 theme=Rose Pine
 cursor-style = block
 cursor-style-blink = false

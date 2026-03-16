@@ -16,6 +16,16 @@ vim.lsp.config["svelte"] = {
   end
 }
 
+vim.lsp.config['rust_analyzer'] = {
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = {
+        features = "all", -- Enable all features
+      },
+    },
+  }
+}
+
 -- config.tailwindcss.setup({
 --   filetypes = { "svelte", "html", "templ", "tsx" },
 --   root_dir = config.util.root_pattern("tsconfig.json", "package.json", ".git", "Makefile"),

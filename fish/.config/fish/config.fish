@@ -31,7 +31,6 @@ if status is-interactive
     # This won't be added again if you remove it.
     source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
-
     #INFO: fish theme and styling
     set fish_greeting
     # Icons for hydro theme https://github.com/jorgebucaran/hydro

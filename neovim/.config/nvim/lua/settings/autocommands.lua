@@ -5,9 +5,24 @@ api.nvim_create_autocmd({ "RecordingEnter" }, {
     vim.opt.cmdheight = 1
   end,
 })
+
 api.nvim_create_autocmd({ "RecordingLeave" }, {
   callback = function()
     vim.opt.cmdheight = 0
+  end,
+})
+
+
+-- Make md files wrap so that reading md is more pleasant
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "mdx" }, -- List of file types to match
+  group = md_group,                -- Assign to the created group
+  callback = function()
+    -- Lua function to be executed when the event occurs
+    vim.opt_local.wrap = true  -- Enable line wrap
+    vim.opt_local.spell = true -- Enable spell check
+    vim.opt_local.linebreak = true
+    -- Add any other settings here
   end,
 })
 
