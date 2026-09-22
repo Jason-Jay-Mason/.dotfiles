@@ -1,0 +1,14 @@
+onboarding = false
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[keys]
+prefix = "ctrl+t"
+new_tab = "prefix+c"
+
+[ui]
+prompt_new_tab_name = false
+hide_tab_bar_when_single_tab = true
+tab_bar_right_separator = ""

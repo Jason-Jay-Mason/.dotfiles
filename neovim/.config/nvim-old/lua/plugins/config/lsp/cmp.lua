@@ -42,6 +42,7 @@ cmp.setup({
 	},
 	window = {
 		completion = cmp.config.window.bordered({
+
 			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
 			col_offset = -3,
 			side_padding = 1,

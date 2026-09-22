@@ -1,8 +1,2 @@
-require("utils").ensure_lazynvim()
-
-require "settings"
-
-require("lazy").setup("plugins")
-
-require "settings.highlights"
-
+require("config.options")
+require("config.lazy")

@@ -1,7 +1,6 @@
 theme=Rose Pine
 cursor-style = block
 cursor-style-blink = false
-command=/opt/homebrew/bin/fish -l -c "tmux attach || tmux"
 shell-integration=none
 window-decoration = true
 term = xterm-256color

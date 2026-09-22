@@ -1,22 +1,8 @@
-local ok, treesitter = pcall(require, 'nvim-treesitter.configs')
+local ok, ts = pcall(require, "nvim-treesitter")
 
 if not ok then
   return
 end
 
-treesitter.setup({
-  ensure_installed = { 'javascript', 'lua', 'vim', 'go', 'python', 'ql', 'css', 'vue', 'typescript', 'html', 'scss' },
-  auto_install = true,
-  autotag = {
-    enable = true,
-  },
-  highlight = {
-    enable = true, -- false will disable the whole extension
-    additional_vim_regex_highlighting = false,
-  },
-  indent = { enable = true, disable = { "yaml" } },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  },
-})
+ts.install({ "svelte", "go", "typescript", "javascript", "html", "css" })
+vim.treesitter.start()

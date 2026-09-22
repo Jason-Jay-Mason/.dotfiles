@@ -21,6 +21,8 @@ if status is-interactive
         fish_add_path -p ~/.local/share/nvm/
         fish_add_path -p ~/Library/Application
         fish_add_path -p /opt/homebrew/Cellar/zigup/2025.05.24/bin
+        # fish_add_path -p /opt/homebrew/opt/mariadb@11.8/bin
+        # fish_add_path -p ~/.local/bin
     end
 
     #bun path vars
@@ -31,23 +33,7 @@ if status is-interactive
     # This won't be added again if you remove it.
     source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
-    #INFO: fish theme and styling
-    set fish_greeting
-    # Icons for hydro theme https://github.com/jorgebucaran/hydro
-    switch (uname -s)
-      case "Linux"
-        set --global hydro_symbol_prompt '󰈺 '
-      case "Darwin"
-        set --global hydro_symbol_prompt '󰈺'
-    end
-    set --global hydro_symbol_git_dirty ' ≠ '
-    set --global hydro_symbol_git_ahead '↑  '
-    set --global hydro_symbol_git_behind '↓  '
-    set --global hydro_color_pwd $fish_color_cwd
-    set --global hydro_color_prompt $fish_color_param
-
-
-    #INFO: TMUX
+    #INFO: Multiplexer
     function is_valid_command
         if which $argv[1] > /dev/null
             true
@@ -56,12 +42,29 @@ if status is-interactive
         end
     end
 
-    #auto start tmux
-    if is_valid_command tmux
-      if not tmux info | grep -q "Terminal"
-        tmux
-      end
+    if command -q herdr
+        set -l sessions (herdr session list 2>/dev/null)
+        if test -z "$sessions"
+            herdr
+        end
     end
+
+    #INFO: fish theme and styling
+    set fish_greeting
+    # Icons for hydro theme https://github.com/jorgebucaran/hydro
+    switch (uname -s)
+      case "Linux"
+        set --global hydro_symbol_prompt 'λ '
+      case "Darwin"
+        set --global hydro_symbol_prompt 'λ'
+    end
+
+    set --global hydro_symbol_git_dirty ' ≠ '
+    set --global hydro_symbol_git_ahead '↑  '
+    set --global hydro_symbol_git_behind '↓  '
+    set --global hydro_color_pwd green
+    set --global hydro_color_prompt cyan
+
 
     #INFO: ALIASES
 

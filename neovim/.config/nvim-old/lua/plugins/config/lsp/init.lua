@@ -1,5 +1,5 @@
 require("plugins.config.lsp.cmp")
 require("plugins.config.lsp.config")
-require("plugins.config.lsp.mason")
 require("plugins.config.lsp.guard")
 require("plugins.config.lsp.servers")
+require("plugins.config.lsp.mason")
