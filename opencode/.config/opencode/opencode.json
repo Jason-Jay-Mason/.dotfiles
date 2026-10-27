@@ -1,18 +1,83 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "permission": {},
-  "plugin": [
-    "opencode-anthropic-oauth"
-  ],
   "mcp": {
+    "payload": {
+      "type": "remote",
+      "url": "http://localhost:3000/api/mcp",
+      "headers": {
+        "Authorization": "Bearer mcp-259cda83d63d616489d8afc3871774f6e7f2b1ef253d6543"
+      },
+      "enabled": true
+    },
     "pencil": {
       "command": [
-        "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+        "/Applications/Pen.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
         "--app",
-        "desktop"
+        "desktop",
+        "--agent",
+        "openCodeCLI"
       ],
       "enabled": true,
       "type": "local"
+    }
+  },
+  "permission": {
+    "read": {
+      "**/.env*": "deny",
+      "**/*.env": "deny",
+      "**/.env.*": "deny",
+      "**/*.pem": "deny",
+      "**/*.key": "deny",
+      "**/*.p12": "deny",
+      "**/*.pfx": "deny",
+      "**/.ssh/**": "deny",
+      "**/.aws/**": "deny",
+      "**/.gnupg/**": "deny",
+      "**/.netrc": "deny",
+      "**/.git-credentials": "deny",
+      "**/.npmrc": "deny",
+      "**/id_rsa*": "deny",
+      "**/id_ed25519*": "deny",
+      "**/id_ecdsa*": "deny",
+      "**/secrets/**": "deny"
+    },
+    "edit": {
+      "**/.env*": "deny",
+      "**/*.env": "deny",
+      "**/.env.*": "deny",
+      "**/*.pem": "deny",
+      "**/*.key": "deny",
+      "**/*.p12": "deny",
+      "**/*.pfx": "deny",
+      "**/.ssh/**": "deny",
+      "**/.aws/**": "deny",
+      "**/.gnupg/**": "deny",
+      "**/.netrc": "deny",
+      "**/.git-credentials": "deny",
+      "**/.npmrc": "deny",
+      "**/id_rsa*": "deny",
+      "**/id_ed25519*": "deny",
+      "**/id_ecdsa*": "deny",
+      "**/secrets/**": "deny"
+    },
+    "grep": {
+      "**/.env*": "deny",
+      "**/*.env": "deny",
+      "**/.env.*": "deny",
+      "**/*.pem": "deny",
+      "**/*.key": "deny",
+      "**/*.p12": "deny",
+      "**/*.pfx": "deny",
+      "**/.ssh/**": "deny",
+      "**/.aws/**": "deny",
+      "**/.gnupg/**": "deny",
+      "**/.netrc": "deny",
+      "**/.git-credentials": "deny",
+      "**/.npmrc": "deny",
+      "**/id_rsa*": "deny",
+      "**/id_ed25519*": "deny",
+      "**/id_ecdsa*": "deny",
+      "**/secrets/**": "deny"
     }
   }
 }
