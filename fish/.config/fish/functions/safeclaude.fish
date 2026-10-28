@@ -5,28 +5,75 @@ function safeclaude --description 'Ensure sandboxed .claude/settings.local.json 
   "permissions": {
     "deny": [
       "Edit(~/.claude/settings.json)",
-      "Edit(./.claude/settings.local.json)"
+      "Edit(./.claude/settings.local.json)",
+      "Read(**/.env)",
+      "Edit(**/.env)",
+      "Write(**/.env)",
+      "Read(**/.env.local)",
+      "Edit(**/.env.local)",
+      "Write(**/.env.local)",
+      "Read(**/.env.*.local)",
+      "Edit(**/.env.*.local)",
+      "Write(**/.env.*.local)",
+      "Read(**/.env.development)",
+      "Edit(**/.env.development)",
+      "Write(**/.env.development)",
+      "Read(**/.env.production)",
+      "Edit(**/.env.production)",
+      "Write(**/.env.production)",
+      "Read(**/.env.staging)",
+      "Edit(**/.env.staging)",
+      "Write(**/.env.staging)",
+      "Read(**/.env.test)",
+      "Edit(**/.env.test)",
+      "Write(**/.env.test)"
+    ]
+  },
+  "hooks":{
+    "PreToolUse": [
+      {
+        "matcher": "Read|Write|Edit|MultiEdit|NotebookEdit|Grep|Glob|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ~/.claude/hooks/block-env-files.py"
+          }
+        ]
+      }
     ]
   },
   "sandbox": {
     "enabled": true,
     "allowUnsandboxedCommands": false,
     "filesystem": {
-      "denyRead": ["~/"],
+      "denyRead": ["~/", "./.env"],
       "allowRead": [
         ".",
         "~/.bun",
         "~/.local/share/nvm",
         "~/.config/fish",
-        "~/.claude/shell-snapshots"
+        "~/.claude/shell-snapshots",
+        "~/.alchemy",
+        "~/.local/state/alchemy",
+        "~/.cache/assets"
       ],
-      "denyWrite": [
-        "~/.claude/settings.json",
-        "./.claude/settings.local.json"
+      "allowWrite": [
+        "~/.alchemy",
+        "~/.local/state/alchemy",
+        "~/.cache/assets"
       ]
+    },
+   "network": {
+        "allowLocalBinding": true,
+        "allowedDomains": [
+          "api.cloudflare.com",
+          "*.argotunnel.com",
+          "*.cftunnel.com"
+        ]
     }
   }
-}'
+}
+    '
 
     set -l needs_write 1
     if test -f $config_file
